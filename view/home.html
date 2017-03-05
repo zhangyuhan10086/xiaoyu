@@ -1,0 +1,43 @@
+<div id="home">
+    <div class="banner">
+        <img src="images/banner1.jpg"/>
+    </div>
+    <div class="musices">
+        <div class="item_title">
+            <div class="t_left">推荐歌单</div>
+            <div class="more"><a href="">更多></a></div>
+        </div>
+        <div class="music_list">
+            <a href="#/detail:id={{arrObj.id}}" ng-repeat="arrObj in data" ng-click="SavepicUrl(arrObj.coverImgUrl)">
+                <span><img ng-src={{arrObj.coverImgUrl}}/></span>
+                <p>{{arrObj.name}}</p>
+            </a>
+        </div>
+        <div class="item_title mv_title">
+            <div class="t_left">推荐MV</div>
+            <div class="more"><a href="">更多></a></div>
+        </div>
+        <div class="mv_list">
+            <a href="">
+                <div class="pic"><img src="images/23_03.jpg"/></div>
+                <p>skin to sKing</p>
+                <span>鹿晗</span>
+            </a>
+            <a href="">
+                <div class="pic"><img src="images/23_03.jpg"/></div>
+                <p>skin to sKing</p>
+                <span>鹿晗</span>
+            </a>
+            <a href="">
+                <div class="pic"><img src="images/23_03.jpg"/></div>
+                <p>skin to sKing</p>
+                <span>鹿晗</span>
+            </a>
+            <a href="">
+                <div class="pic"><img src="images/23_03.jpg"/></div>
+                <p>skin to sKing</p>
+                <span>鹿晗</span>
+            </a>
+        </div>
+    </div>
+</div>

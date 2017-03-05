@@ -1,0 +1,10 @@
+<div id="playlist">
+    <div class="title"><h3>全部歌单</h3></div>
+    <div class="item_list">
+        <a href="#/detail:id={{arrObj.id}}" class="item" ng-repeat="arrObj in items" ng-click="SavepicUrl(arrObj.coverImgUrl)">
+            <img ng-src={{arrObj.coverImgUrl}}>
+            <p>{{arrObj.name}}</p>
+            <span>{{arrObj.playCount}}</span>
+        </a>
+    </div>
+</div>

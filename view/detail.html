@@ -1,0 +1,32 @@
+<div id="detail">
+    <div class="detail_h">
+        <img ng-src={{picUrl}}/>
+        <div class="title">
+            <h3 onClick="javascript: history.go(-1);">返回歌单</h3>
+            <div class="t_content clearfix">
+                <div class="pic">
+                    <img ng-src={{picUrl}}>
+                    <span>257万</span>
+                </div>
+                <div class="font">
+                    <p>{{data.creator.signature}}</p>
+                    <div class="author clearfix">
+                        <div class="icon"><img ng-src="{{data.creator.avatarUrl}}"></div>
+                        <div class="nick">{{data.creator.nickname}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mplist">
+        <h4>播放全部</h4>
+        <a href="" class="clearfix" ng-repeat="arrObj in data.tracks" ng-click="saveMusicId(arrObj.id,arrObj.al.picUrl,arrObj.name,arrObj.ar[0].name);playmusic()">
+            <div class="num">{{$index+1}}</div>
+            <div class="name">
+                <h5>{{arrObj.name}}</h5>
+                <i>{{arrObj.ar[0].name}}</i>
+            </div>
+        </a>
+    </div>
+
+</div>

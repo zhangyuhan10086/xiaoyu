@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp" ng-controller="appCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no,width=device-width">
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/detail.js"></script>
+    <script>
+        (function(){
+            var screenW=document.documentElement.clientWidth;
+            var oHtml=document.documentElement;
+            oHtml.style.fontSize=screenW/3.2+"px";
+        })()
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">小宇云音乐</div>
+        <div class="search"><img src="images/1_03.jpg"/></div>
+    </div>
+    <ul class="nav">
+        <li class="active"><a href="#/home">时下流行</a></li>
+        <li><a href="#/playlist">歌单</a></li>
+        <li><a href="">排行榜</a></li>
+        <li><a href="">热门歌手</a></li>
+    </ul>
+    <div ng-view></div>
+    <div class="music" ng-show="musicUrl">
+        <div class="play_plank clearfix">
+            <div class="icon"><img ng-src={{musiceIcon}}/></div>
+            <div class="font">
+                <h5>{{musiceName}}</h5>
+                <p>{{muscieAuthor}}</p>
+            </div>
+            <div class="controls">
+                <i class="fa fa-list-ul" aria-hidden="true"></i>
+                <i class="fa fa-pause-circle" aria-hidden="true" ng-click=""></i>
+                <i class="fa fa-step-forward" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="jindutiao"></div>
+        <audio id="audio"></audio>
+        <audio src="http://m8.music.126.net/20170305113125/57c19f07d42a1ce3bd325958ce8dbc04/ymusic/6e01/a4d4/bbef/2dda07904eb54d44abb278165e1c6ead.mp3" autoplay id="audio2"></audio>
+    <!--放松下吧~来听首歌,听完可以删啦-->
+    </div>
+</body>
+</html>
