@@ -42,18 +42,16 @@ angular.module("myapp").controller("appCtrl",function($scope,$http){
     $scope.playmusic=function(){
         var id=$scope.musicId;
         var audio=document.getElementById("audio");
-        var audio2=document.getElementById("audio2"); //可以删啦
         $http({
             method:"post",
-            url:"http://musicapi.duapp.com/api.php?type=url&id="+id})
+            url:"https://musicapi.duapp.com/api.php?type=url&id="+id})
             .success(function(data){
                 $scope.musicUrl=data.data[0].url;
                 console.log($scope.musicUrl)
-
                 console.log(audio);
                 audio.setAttribute("src", $scope.musicUrl);
                 audio.play();
-                audio2.pause();     //可以删啦
+
 
                 var jindutiao=document.getElementsByClassName("jindutiao")[0];
                 setInterval(function(){

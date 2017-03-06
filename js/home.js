@@ -2,7 +2,7 @@
 angular.module("myapp").controller("homeCtrl",function($scope,$http){
     $http({
         method:"post",
-        url:"http://musicapi.duapp.com/api.php?type=topPlayList&cat=%E5%85%A8%E9%83%A8&offset=0&limit=6"})
+        url:"https://musicapi.duapp.com/api.php?type=topPlayList&cat=%E5%85%A8%E9%83%A8&offset=0&limit=6"})
         .success(function(data){
             $scope.data=data.playlists;
         });

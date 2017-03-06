@@ -10,9 +10,7 @@ angular.module("myapp").controller("detail",function($scope,$http,$routeParams){
             url:"https://api.imjad.cn/cloudmusic/?type=playlist&"+id})
             .success(function(data){
                 $scope.data=data.playlist;
-
             });
-
     })()
 
 

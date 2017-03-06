@@ -8,7 +8,7 @@ angular.module("myapp").controller("playlist",function($scope,$http){
     function getplayList(s,e){
         $http({
             method:"post",
-            url:"http://musicapi.duapp.com/api.php?type=topPlayList&cat=%E5%85%A8%E9%83%A8&offset="+s+"&limit="+e})
+            url:"https://musicapi.duapp.com/api.php?type=topPlayList&cat=%E5%85%A8%E9%83%A8&offset="+s+"&limit="+e})
             .success(function(data){
                 $scope.data=data.playlists;
                 for(var i=0;i<$scope.data.length;i++){
