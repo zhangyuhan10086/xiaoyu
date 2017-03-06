@@ -168,7 +168,7 @@
 
 #detail{ position:relative; top:0; left: 0; z-index:20; background:#fff;}
 #detail .detail_h{ position:relative; left:0; top:0;  height:1.9rem; overflow: hidden;}
-#detail .detail_h>img{ width:100%; -webkit-filter:blur(9px); filter:blur(9px)}
+#detail .detail_h>img{ width:100%; -webkit-filter:blur(9px); filter:blur(9px); transform: scale(1) rotate(0deg) translate3d(0,0,0);}
 #detail .title{ padding-bottom:0.1rem; position:absolute; left:0; top:0;  }
 #detail .title h3{ height: 0.4rem; color:#dd2f30; padding:0.1rem 0 0 0.15rem;  }
 #detail .t_content{padding-left:0.1rem; }
